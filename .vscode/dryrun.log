@@ -1,0 +1,17 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/mde-cloe/Desktop/PROJECTS/GetNextLine/gnl 1'
+printf "\x1b[32;01m⭒☆━━━━━━━━━━ MAKEFILE START ━━━━━━━━⭒☆\n\x1b[31;37m COMPILING FILES\n\x1b[34;01m"
+mkdir objects/
+printf "\033[1;35m━━━━building LIBFT uwu━━━━\n"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make all -C LIBFT/
+make: Entering an unknown directory
+make: Leaving an unknown directory
+make: Leaving directory `/Users/mde-cloe/Desktop/PROJECTS/GetNextLine/gnl 1'
+ 
+make: *** No rule to make target `objects/ft_printf.o', needed by `libftprintf.a'.
+make: *** No rule to make target `objects/char_printers.o', needed by `libftprintf.a'.
+make: *** No rule to make target `objects/nbr_printers.o', needed by `libftprintf.a'.
+make: *** No rule to make target `objects/hex_printers.o', needed by `libftprintf.a'.
+make: *** LIBFT/: No such file or directory.  Stop.
+make: *** [LIBFT/libft.a] Error 2
+
