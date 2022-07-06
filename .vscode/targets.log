@@ -6,8 +6,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
+ 
+make: *** No rule to make target `all'.  Stop.
 
-# Make data base, printed on Wed Jun 22 16:34:29 2022
+
+# Make data base, printed on Wed Jul  6 20:09:35 2022
 
 # Variables
 
@@ -17,10 +20,6 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 ?F = $(notdir $?)
 # environment
 VSCODE_LOG_NATIVE = false
-# makefile (from `Makefile', line 68)
-START_MSG = @printf "$(GREEN)⭒☆━━━━━━━━━━ MAKEFILE START ━━━━━━━━⭒☆\n$(WHITE) COMPILING FILES\n$(BLUE)"
-# makefile (from `Makefile', line 69)
-RM_MSG = @printf "$(RED)\n━━━━━━━━━━━━━━━━━━━━ \n|objects cleaned :)|\n━━━━━━━━━━━━━━━━━━━━\n "
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # automatic
@@ -29,56 +28,36 @@ RM_MSG = @printf "$(RED)\n━━━━━━━━━━━━━━━━━━
 @F = $(notdir $@)
 # makefile
 CURDIR := /Users/mde-cloe/Desktop/PROJECTS/GetNextLine/gnl 1
-# makefile (from `Makefile', line 59)
-PINK = \x1b[35;01m
 # makefile
 SHELL = /bin/sh
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/make
-# makefile (from `Makefile', line 18)
-CFLAGS = -Wall -Wextra -Werror
-# makefile (from `Makefile', line 61)
-BLUE = \x1b[34;01m
 # environment
-STARSHIP_SESSION_KEY = 2828656322699723
-# makefile (from `Makefile', line 14)
-SRCS := sources/ft_printf.c sources/char_printers.c sources/nbr_printers.c sources/hex_printers.c
-# makefile (from `Makefile', line 11)
-OBJ_DIR := objects/
+STARSHIP_SESSION_KEY = 2389826391214363
 # environment
 VSCODE_VERBOSE_LOGGING = true
-# makefile (from `Makefile', line 5)
-CFILES := ft_printf.c char_printers.c nbr_printers.c hex_printers.c 
-# makefile (from `Makefile', line 17)
-OBJS := objects/ft_printf.o objects/char_printers.o objects/nbr_printers.o objects/hex_printers.o
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000bh_4002w2j/T/vscode-ipc-aa181462-2807-4f42-8824-4d955072950d.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000bh_4002w2j/T/vscode-ipc-1b875058-a8aa-4520-aea5-f899e13d287b.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.S5txPqotkt/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.NkybNfZ1SJ/Render
 # environment
 PATH = /Users/mde-cloe/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Users/mde-cloe/.cargo/bin
-# makefile (from `Makefile', line 67)
-END_MSG = @printf "$(PINK)\n\n✧･:*✧･ﾟ:*💖 all done cutie 💖* :･ﾟ✧*:･ﾟ✧\n"
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
-# makefile (from `Makefile', line 1)
-MAKEFILE_LIST :=  Makefile
+# makefile
+MAKEFILE_LIST := 
 # environment
 VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
-# makefile (from `Makefile', line 12)
-LIBFT_DIR := LIBFT/
-# makefile (from `Makefile', line 66)
-PURPLE = \033[1;35m
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.k2xJAmNZJi/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.33jQeSNk1h/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -89,14 +68,10 @@ VSCODE_PIPE_LOGGING = true
 PWD = /Users/mde-cloe/Desktop/PROJECTS/GetNextLine/gnl 1
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
-# makefile (from `Makefile', line 62)
-GREEN = \x1b[32;01m
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /Users/mde-cloe
-# makefile (from `Makefile', line 65)
-COLORRESET = \x1b[0m
 # default
 MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
@@ -104,7 +79,7 @@ VSCODE_CODE_CACHE_PATH = /Users/mde-cloe/Library/Application Support/Code/Cached
 # environment
 LOGNAME = mde-cloe
 # environment
-APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 ZSH = /Users/mde-cloe/.oh-my-zsh
 # environment
@@ -121,18 +96,12 @@ MAKECMDGOALS := all
 HOMEBREW_CACHE = /tmp/mde-cloe/Homebrew/Caches
 # environment
 SHLVL = 1
-# makefile (from `Makefile', line 64)
-WHITE = \x1b[31;37m
-# makefile (from `Makefile', line 20)
-LIBFT := LIBFT/libft.a
 # default
 MAKE_VERSION := 3.81
 # environment
 USER = mde-cloe
 # makefile
-.DEFAULT_GOAL := libftprintf.a
-# makefile (from `Makefile', line 1)
-NAME := libftprintf.a
+.DEFAULT_GOAL := 
 # environment
 LESS = -R
 # automatic
@@ -147,8 +116,6 @@ TMPDIR = /var/folders/zz/zyxvpxvq6csfxvn_n000bh_4002w2j/T/
 *F = $(notdir $*)
 # environment
 VSCODE_IPC_HOOK = /Users/mde-cloe/Library/Application Support/Code/1.68.1-main.sock
-# makefile (from `Makefile', line 60)
-RED = \x1b[31;01m
 # makefile
 MAKEFLAGS = Rrqp
 # environment
@@ -156,45 +123,41 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.2408
+XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000004.Electron
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
-# makefile (from `Makefile', line 63)
-YELLOW = \x1b[33;01m
 # automatic
 +F = $(notdir $+)
 # environment
 __CF_USER_TEXT_ENCODING = 0x17051:0x0:0x0
+# environment
+COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
-# makefile (from `Makefile', line 10)
-SRC_DIR := sources/
 # automatic
 <F = $(notdir $<)
 # environment
 PAGER = less
 # environment
 LC_ALL = C
+# environment
+SECURITYSESSIONID = 186a8
 # automatic
 ^F = $(notdir $^)
 # default
 SUFFIXES := 
 # default
 .INCLUDE_DIRS = /usr/local/include
-# makefile (from `Makefile', line 16)
-OFILES := ft_printf.o char_printers.o nbr_printers.o hex_printers.o
-# makefile (from `Makefile', line 3)
-HFILE := ft_printf.h
 # environment
 MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 28500
+VSCODE_PID = 831
 # environment
 STARSHIP_SHELL = zsh
 # variable set hash-table stats:
-# Load=91/1024=9%, Rehash=0, Collisions=8/132=6%
+# Load=71/1024=7%, Rehash=0, Collisions=2/92=2%
 
 # Pattern-specific Variable Values
 
@@ -202,36 +165,15 @@ STARSHIP_SHELL = zsh
 
 # Directories
 
-# . (device 16777229, inode 834783): 9 files, no impossibilities.
-# sources: could not be stat'd.
+# . (device 16777229, inode 834783): 15 files, no impossibilities.
 
-# 9 files, no impossibilities in 2 directories.
+# 15 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
-objects/%.o: sources/%.c
-#  commands to execute (from `Makefile', line 33):
-	@$(CC) -c $(CFLAGS) $< -o $@ -I$(LIBFT_DIR) -I$(SRC_DIR)
-	@printf "$@  $(GREEN) (DONE) $(BLUE)\n"
-	
-
-# 1 implicit rules, 0 (0.0%) terminal.
+# No implicit rules.
 
 # Files
-
-# Not a target:
-objects/nbr_printers.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-objects:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `Makefile', line 37):
-	mkdir $(OBJ_DIR)
-	
 
 # Not a target:
 all:
@@ -243,17 +185,6 @@ all:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-objects/ft_printf.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-.PHONY: clean fclean re test
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
 .SUFFIXES:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -261,40 +192,23 @@ objects/ft_printf.o:
 
 # Not a target:
 Makefile:
+#  A default, MAKEFILES, or -include/sinclude makefile.
 #  Implicit rule search has been done.
-#  Last modified 2022-06-13 16:59:29
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Failed to be updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-test: libftprintf.a
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-#  commands to execute (from `Makefile', line 40):
-	@$(CC) $(NAME) testing.c -LLIBFT -lft -L. -lftprintf -I$(SRC_DIR) -ILIBFT/ -o cute_little_test
-	@printf "$(PURPLE)\n:*✧･ﾟ cute_little_test :*✧･ﾟ $(WHITE)has been made :) \n\n\n"
-	
-
-fclean: clean
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-#  commands to execute (from `Makefile', line 49):
-	@$(RM)	$(NAME)
-	
-
 # Not a target:
-objects/hex_printers.o:
-#  Implicit rule search has not been done.
- 
-make: *** No rule to make target `all'.  Stop.
-
-#  Modification time never checked.
-#  File has not been updated.
+makefile:
+#  A default, MAKEFILES, or -include/sinclude makefile.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 .DEFAULT:
@@ -302,69 +216,29 @@ make: *** No rule to make target `all'.  Stop.
 #  Modification time never checked.
 #  File has not been updated.
 
-re: fclean libftprintf.a
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-
-clean:
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-#  commands to execute (from `Makefile', line 45):
-	$(RM_MSG)
-	@$(RM) -rf $(OBJ_DIR)
-	
-
-LIBFT/libft.a:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `Makefile', line 29):
-	@printf "$(PURPLE)━━━━building LIBFT uwu━━━━\n"
-	@$(MAKE) all -C $(LIBFT_DIR)
-	
-
-libftprintf.a: GREETING objects objects/ft_printf.o objects/char_printers.o objects/nbr_printers.o objects/hex_printers.o LIBFT/libft.a
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `Makefile', line 23):
-	@printf "$(WHITE) BUILDING LIBRARY \n$(YELLOW) $(NAME) $(GREEN) (DONE)\n$(GREEN)━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-	@cp $(LIBFT) $(NAME)
-	@ar -cr $(NAME) $(OBJS)
-	$(END_MSG)
-	
-
-GREETING:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `Makefile', line 54):
-	$(START_MSG)
-	
-
 # Not a target:
-objects/char_printers.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+GNUmakefile:
+#  A default, MAKEFILES, or -include/sinclude makefile.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # files hash-table stats:
-# Load=17/1024=2%, Rehash=0, Collisions=0/44=0%
+# Load=6/1024=1%, Rehash=0, Collisions=0/17=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
 
 # No general (`VPATH' variable) search path.
 
-# # of strings in strcache: 1
-# # of strcache buffers: 1
-# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
-# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+# # of strings in strcache: 0
+# # of strcache buffers: 0
+# strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
+# strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Wed Jun 22 16:34:29 2022
+# Finished Make data base on Wed Jul  6 20:09:35 2022
 
  
