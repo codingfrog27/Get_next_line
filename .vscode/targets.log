@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Wed Jul  6 20:09:35 2022
+# Make data base, printed on Tue Jul 12 16:36:43 2022
 
 # Variables
 
@@ -35,17 +35,19 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 # environment
 _ = /usr/bin/make
 # environment
-STARSHIP_SESSION_KEY = 2389826391214363
+STARSHIP_SESSION_KEY = 1490160472737763
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000bh_4002w2j/T/vscode-ipc-1b875058-a8aa-4520-aea5-f899e13d287b.sock
+P9K_SSH = 0
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000bh_4002w2j/T/vscode-ipc-ceb4694b-203f-4829-9961-3634b3e158e4.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.NkybNfZ1SJ/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.9KALMlDeD7/Render
 # environment
-PATH = /Users/mde-cloe/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Users/mde-cloe/.cargo/bin
+PATH = /Users/mde-cloe/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/dotnet:/usr/local/munki:/opt/X11/bin:~/.dotnet/tools:/Users/mde-cloe/.cargo/bin
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # makefile
@@ -57,11 +59,13 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.33jQeSNk1h/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.lc6AtQGN75/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
 HOMEBREW_TEMP = /tmp/mde-cloe/Homebrew/Temp
+# environment
+DISPLAY = /private/tmp/com.apple.launchd.dMGSUztqKS/org.xquartz:0
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -123,15 +127,13 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000004.Electron
+XPC_SERVICE_NAME = com.microsoft.VSCode.2424
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # environment
 __CF_USER_TEXT_ENCODING = 0x17051:0x0:0x0
-# environment
-COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
 # automatic
@@ -140,8 +142,6 @@ MAKEFILES :=
 PAGER = less
 # environment
 LC_ALL = C
-# environment
-SECURITYSESSIONID = 186a8
 # automatic
 ^F = $(notdir $^)
 # default
@@ -153,7 +153,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 831
+VSCODE_PID = 12983
 # environment
 STARSHIP_SHELL = zsh
 # variable set hash-table stats:
@@ -165,9 +165,9 @@ STARSHIP_SHELL = zsh
 
 # Directories
 
-# . (device 16777229, inode 834783): 15 files, no impossibilities.
+# . (device 16777229, inode 834783): 14 files, no impossibilities.
 
-# 15 files, no impossibilities in 1 directories.
+# 14 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -239,6 +239,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Wed Jul  6 20:09:35 2022
+# Finished Make data base on Tue Jul 12 16:36:43 2022
 
  

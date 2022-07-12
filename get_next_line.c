@@ -6,7 +6,7 @@
 /*   By: mde-cloe <mde-cloe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/31 19:19:31 by mde-cloe      #+#    #+#                 */
-/*   Updated: 2022/07/06 20:23:21 by mde-cloe      ########   odam.nl         */
+/*   Updated: 2022/07/12 18:50:21 by mde-cloe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,11 @@ char	*get_next_line(int fd)
 	static char	buff[BUFFER_SIZE + 1];
 	int		read_ret;
 
-	line = NULL;
+	line = "";
 	if (fd < 0 || fd > OPEN_MAX || read(fd, 0, 0) == -1)
 		return (NULL);
 	if (*buff != '\0')
 		line = buff_to_line(buff, line);
-		if (!line)
-			return (NULL);
 	while(nlen(line) == 0)
 	{
 		read_ret = read(fd, buff, BUFFER_SIZE);
@@ -33,12 +31,12 @@ char	*get_next_line(int fd)
 		buff[read_ret] = '\0';
 		line = buff_to_line(buff, line);
 	}
-	//buff_update(buff);
+	buff_update(buff);
 	if (read_ret == 0 && *line == '\0')
 		return (NULL);
-	//buff_update //if \n is in the middle of the buffer you need to move the remainder to the start of the buffer
 	return (line);
 }
+
 
 
 char	*buff_to_line(char *buff, char *line)
@@ -47,22 +45,33 @@ char	*buff_to_line(char *buff, char *line)
 	size_t	buff_end = nlen(buff);
 	if (!buff_end)
 		buff_end = strlen(buff);
-
-	size_t line2_len = buff_end + line_len;
-	char	*line2 = malloc(line2_len);
+	char	*line2 = malloc(buff_end + line_len + 1);
 	if (!line2)
 		return (NULL);
 	strncpy(line2, line, line_len);
-	free(line);
-	strncat(line2, buff, line2_len);
+	strncat(line2, buff, buff_end + 1);
 	return (line2);
 }
 
-void buff_update(char *buff)
+void buff_update(char buff[])
 {
-	char	tmp[BUFFER_SIZE + 1];
+	size_t	npos;
+	size_t	i;
 
-
+	npos = nlen(buff);
+	i = 0;
+//	buff[npos] = '\0';
+	if (buff[npos + 1] == '\0'){
+		bzero(buff, BUFFER_SIZE);
+		return ;
+	}
+	while(buff[npos])
+	{
+		buff[i] = buff[npos];
+		buff[npos] = '\0';
+		i++;
+		npos++;
+	}
 }
 
 
@@ -82,11 +91,10 @@ size_t	nlen(char *str)
 int main()
 {
 	int fd = open("text.txt", O_RDONLY);
-	char	*line = get_next_line(fd);
-	while (line != NULL)
+	for (int i = 0; i < 5; ++i)
 	{
-	printf("[%s]\n", line);
 	char *line = get_next_line(fd);
+	printf("%s", line);
 	}
 	close(fd);
 	return 0;
