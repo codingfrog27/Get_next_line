@@ -1,1 +1,4 @@
 *.DS_store
+.normignore
+.normignore
+a.out.dSYM/Contents/Resources/DWARF/a.out
