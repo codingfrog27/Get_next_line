@@ -6,15 +6,15 @@
 /*   By: mde-cloe <mde-cloe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/07/19 19:19:18 by mde-cloe      #+#    #+#                 */
-/*   Updated: 2022/07/19 19:19:34 by mde-cloe      ########   odam.nl         */
+/*   Updated: 2022/07/22 21:23:01 by mde-cloe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int main()
+int	main(void)
 {
-	int fd = open("text.txt", O_RDONLY);
+	int fd	= open("text.txt", O_RDONLY);
 	char *line = get_next_line(fd);
 	for (int i = 0; i < 20; i++)
 	{
@@ -23,5 +23,6 @@ int main()
 	line = get_next_line(fd);
 	}
 	close(fd);
+	system("leaks a.out");
 	return 0;
 }

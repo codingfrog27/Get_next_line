@@ -6,7 +6,7 @@
 /*   By: mde-cloe <mde-cloe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/31 19:19:17 by mde-cloe      #+#    #+#                 */
-/*   Updated: 2022/07/22 19:06:47 by mde-cloe      ########   odam.nl         */
+/*   Updated: 2022/07/22 22:14:07 by mde-cloe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,16 @@
 
 # include <limits.h>
 # include <stdlib.h>
-# include <fcntl.h>
 # include <unistd.h>
 # include <stdbool.h>
 
-# include <stdio.h>
-# include <strings.h>
-
 char	*get_next_line(int fd);
 char	*buff_to_line(char *buff, char *line);
-size_t	nlen(char *str, bool look_for_newline);
+size_t	nl_strlen(char *str, bool look_for_newline);
 void	buff_update(char *buff);
+void	strcopycat(char *dst, char *cpysrc, char *catsrc, \
+size_t catlen);
+char	*stralloc(size_t space);
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 42

@@ -6,13 +6,11 @@
 /*   By: mde-cloe <mde-cloe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/31 19:19:31 by mde-cloe      #+#    #+#                 */
-/*   Updated: 2022/07/21 19:21:02 by mde-cloe      ########   odam.nl         */
+/*   Updated: 2022/07/22 21:52:46 by mde-cloe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-//Todo: replace: calloc, strncpy and strncat with homemade functions
 
 char	*get_next_line(int fd)
 {
@@ -20,13 +18,13 @@ char	*get_next_line(int fd)
 	static char	buff[BUFFER_SIZE + 1];
 	int			read_ret;
 
-	line = calloc(1, sizeof(char));
 	if (fd < 0 || fd > OPEN_MAX || read(fd, 0, 0) == -1)
 		return (NULL);
+	line = stralloc(1);
 	if (*buff != '\0')
 		line = buff_to_line(buff, line);
 		read_ret = 1;
-	while (!nlen(line, true) && read_ret > 0)
+	while (!nl_strlen(line, true) && read_ret > 0)
 	{
 		read_ret = read(fd, buff, BUFFER_SIZE);
 		if (read_ret == -1)

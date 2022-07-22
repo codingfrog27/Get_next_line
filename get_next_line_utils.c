@@ -6,7 +6,7 @@
 /*   By: mde-cloe <mde-cloe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/03/31 19:19:25 by mde-cloe      #+#    #+#                 */
-/*   Updated: 2022/07/21 19:21:29 by mde-cloe      ########   odam.nl         */
+/*   Updated: 2022/07/22 22:02:42 by mde-cloe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,48 +18,75 @@ char	*buff_to_line(char *buff, char *line)
 	size_t	buff_end;
 	char	*line2;
 
-	line_len = nlen(line, false);
-	buff_end = nlen(buff, true);
+	line_len = nl_strlen(line, false);
+	buff_end = nl_strlen(buff, true);
 	if (!buff_end)
-		buff_end = nlen(buff, false) + 1;
-	line2 = calloc(buff_end + line_len + 1, sizeof(char));
+		buff_end = nl_strlen(buff, false) + 1;
+	line2 = stralloc(buff_end + line_len + 1);
 	if (!line2)
 		return (NULL);
-	strncpy(line2, line, line_len);
+	strcopycat(line2, line, buff, buff_end);
 	free(line);
-	strncat(line2, buff, buff_end);
 	return (line2);
 }
 
 void	buff_update(char *buff)
 {
 	size_t	i;
-	size_t	npos;
+	size_t	nl_len;
 	size_t	bufflen;
 
 	i = 0;
-	npos = nlen(buff, true);
-	bufflen = nlen(buff, false);
-	if (buff[npos] == '\0')
+	nl_len = nl_strlen(buff, true);
+	bufflen = nl_strlen(buff, false);
+	if (buff[nl_len] == '\0')
 	{
-		bzero(buff, BUFFER_SIZE);
+		while (i < BUFFER_SIZE)
+		{
+			buff[i] = '\0';
+			i++;
+		}
 		return ;
 	}
-	while (i <= bufflen - npos)
+	while (i <= bufflen - nl_len)
 	{
-		buff[i] = buff[npos + i];
+		buff[i] = buff[nl_len + i];
 		i++;
 	}
 	buff[i] = '\0';
 }
 
+//wish functions could take 5 args, then i wouldnt need to strlen again
+
+void	strcopycat(char *dst, char *cpysrc, char *catsrc, \
+size_t catlen)
+{
+	size_t	cpylen;
+	size_t	i;
+	size_t	j;
+
+	cpylen = nl_strlen(cpysrc, false);
+	i = 0;
+	j = 0;
+	while (i < cpylen)
+	{
+		dst[i] = cpysrc[i];
+		i++;
+	}
+	while (j < catlen)
+	{
+		dst[i + j] = catsrc[j];
+		j++;
+	}
+}
+
 //returns the index AFTER \n when used for newline
-size_t	nlen(char *str, bool look_for_newline)
+size_t	nl_strlen(char *str, bool stop_at_nl)
 {
 	size_t	len;
 
 	len = 0;
-	if (look_for_newline)
+	if (stop_at_nl == true)
 	{
 		while (str[len])
 		{
@@ -72,4 +99,23 @@ size_t	nlen(char *str, bool look_for_newline)
 	while (str[len])
 		len++;
 	return (len);
+}
+
+char	*stralloc(size_t space)
+{
+	char	*str;
+	size_t	i;
+
+	if (!space)
+		space = 1;
+	str = malloc(space * sizeof(char));
+	i = 0;
+	if (!str)
+		return (NULL);
+	while (i < space)
+	{
+		str[i] = '\0';
+		i++;
+	}
+	return (str);
 }
