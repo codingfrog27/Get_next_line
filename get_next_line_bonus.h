@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   get_next_line.h                                    :+:    :+:            */
+/*   get_next_line_bonus.h                              :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mde-cloe <mde-cloe@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2022/03/31 19:19:17 by mde-cloe      #+#    #+#                 */
-/*   Updated: 2022/07/22 19:06:47 by mde-cloe      ########   odam.nl         */
+/*   Created: 2022/07/22 19:07:10 by mde-cloe      #+#    #+#                 */
+/*   Updated: 2022/07/22 19:07:24 by mde-cloe      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
 # define GET_NEXT_LINE_H
 
 # include <limits.h>
