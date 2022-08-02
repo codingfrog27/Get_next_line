@@ -1,0 +1,13 @@
+heyy :)
+how are you?
+I'm pretty good! My party will be tomorrow!
+
+Cool!
+ye
+y
+e
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+doei
